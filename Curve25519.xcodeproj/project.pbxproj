@@ -125,7 +125,6 @@
 		CEB458C9201CA4FB002BB845 /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB45747201C8F4C002BB845 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEB458CA201CA4FF002BB845 /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB45747201C8F4C002BB845 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEB458D8201CA61A002BB845 /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB45747201C8F4C002BB845 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CEB458E2201CA634002BB845 /* Curve25519_watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB458E0201CA634002BB845 /* Curve25519_watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEB458E6201CA66D002BB845 /* Curve25519.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB45747201C8F4C002BB845 /* Curve25519.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEB458E7201CA7C8002BB845 /* curve_sigs.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB45798201C8F68002BB845 /* curve_sigs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEB458E8201CA7C8002BB845 /* curve25519-donna.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB4575F201C8F68002BB845 /* curve25519-donna.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -460,6 +459,12 @@
 		CEB45A38201CA83C002BB845 /* internal_fast_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB457AA201C8F68002BB845 /* internal_fast_tests.c */; };
 		CEB45A39201CA83D002BB845 /* internal_slow_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB457A9201C8F68002BB845 /* internal_slow_tests.c */; };
 		CEB45A3A201CA83D002BB845 /* internal_fast_tests.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB457AA201C8F68002BB845 /* internal_fast_tests.c */; };
+		CEB45BC0201CCD70002BB845 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB45846201C8FBF002BB845 /* Curve.swift */; };
+		CEB45BC1201CCD71002BB845 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB45846201C8FBF002BB845 /* Curve.swift */; };
+		CEB45BC2201CCD71002BB845 /* Curve.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB45846201C8FBF002BB845 /* Curve.swift */; };
+		CEB45BC3201CCD83002BB845 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45760201C8F68002BB845 /* curve25519-donna.c */; };
+		CEB45BC4201CCD83002BB845 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45760201C8F68002BB845 /* curve25519-donna.c */; };
+		CEB45BC5201CCD84002BB845 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45760201C8F68002BB845 /* curve25519-donna.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -597,7 +602,6 @@
 		CEB458D0201CA596002BB845 /* Curve25519.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Curve25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB458D3201CA596002BB845 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		CEB458DE201CA634002BB845 /* Curve25519.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Curve25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEB458E0201CA634002BB845 /* Curve25519_watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Curve25519_watchOS.h; sourceTree = "<group>"; };
 		CEB458E1201CA634002BB845 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -646,7 +650,6 @@
 			children = (
 				CEB45746201C8F4C002BB845 /* Curve25519 */,
 				CEB45751201C8F4C002BB845 /* Curve25519Tests */,
-				CEB458DF201CA634002BB845 /* Curve25519-watchOS */,
 				CEB45745201C8F4C002BB845 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -869,14 +872,6 @@
 			path = other;
 			sourceTree = "<group>";
 		};
-		CEB458DF201CA634002BB845 /* Curve25519-watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				CEB458E0201CA634002BB845 /* Curve25519_watchOS.h */,
-			);
-			path = "Curve25519-watchOS";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1043,7 +1038,6 @@
 				CEB45A2D201CA82F002BB845 /* crypto_uint64.h in Headers */,
 				CEB45A12201CA821002BB845 /* gen_veddsa.h in Headers */,
 				CEB45A28201CA82F002BB845 /* crypto_int32.h in Headers */,
-				CEB458E2201CA634002BB845 /* Curve25519_watchOS.h in Headers */,
 				CEB458F5201CA7C9002BB845 /* internal_slow_tests.h in Headers */,
 				CEB45900201CA7EB002BB845 /* d.h in Headers */,
 				CEB45A2B201CA82F002BB845 /* crypto_sign.h in Headers */,
@@ -1399,10 +1393,12 @@
 				CEB4591E201CA7FC002BB845 /* ge_p3_to_p2.c in Sources */,
 				CEB459A2201CA810002BB845 /* ge_scalarmult.c in Sources */,
 				CEB459A1201CA810002BB845 /* ge_scalarmult_cofactor.c in Sources */,
+				CEB45BC3201CCD83002BB845 /* curve25519-donna.c in Sources */,
 				CEB4591B201CA7FC002BB845 /* ge_p3_0.c in Sources */,
 				CEB45920201CA7FC002BB845 /* ge_precomp_0.c in Sources */,
 				CEB459A4201CA810002BB845 /* open_modified.c in Sources */,
 				CEB45912201CA7FC002BB845 /* ge_add.c in Sources */,
+				CEB45BC0201CCD70002BB845 /* Curve.swift in Sources */,
 				CEB459A5201CA810002BB845 /* sc_clamp.c in Sources */,
 				CEB45A30201CA835002BB845 /* hash.c in Sources */,
 				CEB45907201CA7FC002BB845 /* fe_frombytes.c in Sources */,
@@ -1478,10 +1474,12 @@
 				CEB45944201CA7FD002BB845 /* ge_p3_to_p2.c in Sources */,
 				CEB459B9201CA811002BB845 /* ge_scalarmult.c in Sources */,
 				CEB459B8201CA811002BB845 /* ge_scalarmult_cofactor.c in Sources */,
+				CEB45BC4201CCD83002BB845 /* curve25519-donna.c in Sources */,
 				CEB45941201CA7FD002BB845 /* ge_p3_0.c in Sources */,
 				CEB45946201CA7FD002BB845 /* ge_precomp_0.c in Sources */,
 				CEB459BB201CA811002BB845 /* open_modified.c in Sources */,
 				CEB45938201CA7FD002BB845 /* ge_add.c in Sources */,
+				CEB45BC1201CCD71002BB845 /* Curve.swift in Sources */,
 				CEB459BC201CA811002BB845 /* sc_clamp.c in Sources */,
 				CEB45A32201CA836002BB845 /* hash.c in Sources */,
 				CEB4592D201CA7FD002BB845 /* fe_frombytes.c in Sources */,
@@ -1557,10 +1555,12 @@
 				CEB4596A201CA7FD002BB845 /* ge_p3_to_p2.c in Sources */,
 				CEB459D0201CA811002BB845 /* ge_scalarmult.c in Sources */,
 				CEB459CF201CA811002BB845 /* ge_scalarmult_cofactor.c in Sources */,
+				CEB45BC5201CCD84002BB845 /* curve25519-donna.c in Sources */,
 				CEB45967201CA7FD002BB845 /* ge_p3_0.c in Sources */,
 				CEB4596C201CA7FD002BB845 /* ge_precomp_0.c in Sources */,
 				CEB459D2201CA811002BB845 /* open_modified.c in Sources */,
 				CEB4595E201CA7FD002BB845 /* ge_add.c in Sources */,
+				CEB45BC2201CCD71002BB845 /* Curve.swift in Sources */,
 				CEB459D3201CA811002BB845 /* sc_clamp.c in Sources */,
 				CEB45A34201CA837002BB845 /* hash.c in Sources */,
 				CEB45953201CA7FD002BB845 /* fe_frombytes.c in Sources */,
@@ -1641,7 +1641,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Curve25519;
@@ -1696,7 +1695,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Curve25519;
 				SDKROOT = iphoneos;
@@ -1797,7 +1795,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Curve25519/other/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "christophhagen.Curve25519-macOS";
 				PRODUCT_NAME = Curve25519;
 				SDKROOT = macosx;
@@ -1821,7 +1818,6 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Curve25519/other/Info-macOS.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = "christophhagen.Curve25519-macOS";
 				PRODUCT_NAME = Curve25519;
 				SDKROOT = macosx;
@@ -1849,7 +1845,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Debug;
 		};
@@ -1872,7 +1867,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Release;
 		};
@@ -1896,7 +1890,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Debug;
 		};
@@ -1920,7 +1913,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.2;
 			};
 			name = Release;
 		};
