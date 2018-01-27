@@ -34,14 +34,21 @@ public struct Curve25519 {
      - parameter basepoint: The basepoint of the curve, 32 byte
      - returns: The public key (32 byte), or nil on failure
      */
-    public static func publicKey(for privateKey: [UInt8], basepoint: [UInt8]) -> [UInt8]? {
+    public static func publicKey(for privateKey: Data, basepoint: Data) -> Data? {
         guard privateKey.count >= keyLength,
             basepoint.count >= keyLength else {
             return nil
         }
 
-        let key = [UInt8](repeating: 0, count: keyLength)
-        let result = curve25519_donna(UnsafeMutablePointer<UInt8>(mutating: key), privateKey, basepoint)
+        var key = Data(count: keyLength)
+        let result: Int32 = key.withUnsafeMutableBytes { keyPtr in
+            privateKey.withUnsafeBytes { privPtr in
+                basepoint.withUnsafeBytes {
+                    curve25519_donna(keyPtr, privPtr, $0)
+                }
+            }
+        }
+        
         guard result == 0 else {
             return nil
         }
