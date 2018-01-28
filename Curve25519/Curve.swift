@@ -11,7 +11,7 @@ import Foundation
 /**
  Curve25519 provides access to elliptic curve signature, agreement and verification functions.
  */
-public struct Curve25519 {
+public final class Curve25519 {
 
     /// The length of the private and public key in bytes
     public static let keyLength = 32
@@ -23,7 +23,7 @@ public struct Curve25519 {
     public static let vrfSignatureLength = 96
 
     /// The length of the VRF verification output in bytes
-    static let vrfVerifyLength = 32
+    public static let vrfVerifyLength = 32
 
     // MARK: Public keys
 
@@ -37,7 +37,7 @@ public struct Curve25519 {
     public static func publicKey(for privateKey: Data, basepoint: Data) -> Data? {
         guard privateKey.count >= keyLength,
             basepoint.count >= keyLength else {
-            return nil
+                return nil
         }
 
         var key = Data(count: keyLength)
