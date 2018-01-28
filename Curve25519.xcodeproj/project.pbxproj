@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CEB4574E201C8F4C002BB845 /* Curve25519.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEB45744201C8F4C002BB845 /* Curve25519.framework */; };
-		CEB45753201C8F4C002BB845 /* Curve25519Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB45752201C8F4C002BB845 /* Curve25519Tests.swift */; };
+		CEB45753201C8F4C002BB845 /* InternalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB45752201C8F4C002BB845 /* InternalTests.swift */; };
 		CEB457D5201C8F68002BB845 /* curve25519-donna.h in Headers */ = {isa = PBXBuildFile; fileRef = CEB4575F201C8F68002BB845 /* curve25519-donna.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CEB457D6201C8F68002BB845 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45760201C8F68002BB845 /* curve25519-donna.c */; };
 		CEB457D7201C8F68002BB845 /* ge_msub.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45762201C8F68002BB845 /* ge_msub.c */; };
@@ -465,6 +465,14 @@
 		CEB45BC3201CCD83002BB845 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45760201C8F68002BB845 /* curve25519-donna.c */; };
 		CEB45BC4201CCD83002BB845 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45760201C8F68002BB845 /* curve25519-donna.c */; };
 		CEB45BC5201CCD84002BB845 /* curve25519-donna.c in Sources */ = {isa = PBXBuildFile; fileRef = CEB45760201C8F68002BB845 /* curve25519-donna.c */; };
+		CEC812D1201E0D590018D42E /* CurveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D0201E0D590018D42E /* CurveError.swift */; };
+		CEC812D3201E14BB0018D42E /* AgreementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D2201E14BB0018D42E /* AgreementTests.swift */; };
+		CEC812D5201E17180018D42E /* KeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D4201E17180018D42E /* KeyTests.swift */; };
+		CEC812D7201E17470018D42E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D6201E17470018D42E /* Data.swift */; };
+		CEC812D9201E1F210018D42E /* SignatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D8201E1F210018D42E /* SignatureTests.swift */; };
+		CEC812DB201E1F470018D42E /* VerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812DA201E1F470018D42E /* VerificationTests.swift */; };
+		CEC812DD201E1F7F0018D42E /* VRFSignatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812DC201E1F7F0018D42E /* VRFSignatureTests.swift */; };
+		CEC812DF201E25CA0018D42E /* VRFVerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812DE201E25CA0018D42E /* VRFVerificationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -482,7 +490,7 @@
 		CEB45747201C8F4C002BB845 /* Curve25519.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Curve25519.h; sourceTree = "<group>"; };
 		CEB45748201C8F4C002BB845 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		CEB4574D201C8F4C002BB845 /* Curve25519Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Curve25519Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CEB45752201C8F4C002BB845 /* Curve25519Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve25519Tests.swift; sourceTree = "<group>"; };
+		CEB45752201C8F4C002BB845 /* InternalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalTests.swift; sourceTree = "<group>"; };
 		CEB45754201C8F4C002BB845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEB4575F201C8F68002BB845 /* curve25519-donna.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "curve25519-donna.h"; sourceTree = "<group>"; };
 		CEB45760201C8F68002BB845 /* curve25519-donna.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "curve25519-donna.c"; sourceTree = "<group>"; };
@@ -603,6 +611,14 @@
 		CEB458D3201CA596002BB845 /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 		CEB458DE201CA634002BB845 /* Curve25519.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Curve25519.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB458E1201CA634002BB845 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
+		CEC812D0201E0D590018D42E /* CurveError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurveError.swift; sourceTree = "<group>"; };
+		CEC812D2201E14BB0018D42E /* AgreementTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementTests.swift; sourceTree = "<group>"; };
+		CEC812D4201E17180018D42E /* KeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyTests.swift; sourceTree = "<group>"; };
+		CEC812D6201E17470018D42E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		CEC812D8201E1F210018D42E /* SignatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureTests.swift; sourceTree = "<group>"; };
+		CEC812DA201E1F470018D42E /* VerificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationTests.swift; sourceTree = "<group>"; };
+		CEC812DC201E1F7F0018D42E /* VRFSignatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRFSignatureTests.swift; sourceTree = "<group>"; };
+		CEC812DE201E25CA0018D42E /* VRFVerificationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VRFVerificationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -671,6 +687,7 @@
 			children = (
 				CEB45747201C8F4C002BB845 /* Curve25519.h */,
 				CEB45846201C8FBF002BB845 /* Curve.swift */,
+				CEC812D0201E0D590018D42E /* CurveError.swift */,
 				CEB45845201C8F6D002BB845 /* pub */,
 				CEB4575E201C8F68002BB845 /* lib */,
 				CEB458C8201CA368002BB845 /* other */,
@@ -681,8 +698,15 @@
 		CEB45751201C8F4C002BB845 /* Curve25519Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CEB45752201C8F4C002BB845 /* Curve25519Tests.swift */,
+				CEC812D2201E14BB0018D42E /* AgreementTests.swift */,
+				CEC812D6201E17470018D42E /* Data.swift */,
 				CEB45754201C8F4C002BB845 /* Info.plist */,
+				CEB45752201C8F4C002BB845 /* InternalTests.swift */,
+				CEC812D4201E17180018D42E /* KeyTests.swift */,
+				CEC812D8201E1F210018D42E /* SignatureTests.swift */,
+				CEC812DA201E1F470018D42E /* VerificationTests.swift */,
+				CEC812DC201E1F7F0018D42E /* VRFSignatureTests.swift */,
+				CEC812DE201E25CA0018D42E /* VRFVerificationTests.swift */,
 			);
 			path = Curve25519Tests;
 			sourceTree = "<group>";
@@ -1307,6 +1331,7 @@
 				CEB457E1201C8F68002BB845 /* fe_isnonzero.c in Sources */,
 				CEB457D7201C8F68002BB845 /* ge_msub.c in Sources */,
 				CEB457E6201C8F68002BB845 /* fe_invert.c in Sources */,
+				CEC812D1201E0D590018D42E /* CurveError.swift in Sources */,
 				CEB45825201C8F68002BB845 /* ge_add.c in Sources */,
 				CEB45827201C8F68002BB845 /* ge_sub.c in Sources */,
 				CEB45824201C8F68002BB845 /* ge_p3_to_cached.c in Sources */,
@@ -1334,7 +1359,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEB45753201C8F4C002BB845 /* Curve25519Tests.swift in Sources */,
+				CEC812D5201E17180018D42E /* KeyTests.swift in Sources */,
+				CEC812DF201E25CA0018D42E /* VRFVerificationTests.swift in Sources */,
+				CEC812D9201E1F210018D42E /* SignatureTests.swift in Sources */,
+				CEC812D3201E14BB0018D42E /* AgreementTests.swift in Sources */,
+				CEC812DD201E1F7F0018D42E /* VRFSignatureTests.swift in Sources */,
+				CEB45753201C8F4C002BB845 /* InternalTests.swift in Sources */,
+				CEC812DB201E1F470018D42E /* VerificationTests.swift in Sources */,
+				CEC812D7201E17470018D42E /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1647,6 +1679,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1699,6 +1732,7 @@
 				PRODUCT_NAME = Curve25519;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
