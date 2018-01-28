@@ -21,7 +21,7 @@ public final class Curve25519 {
     /// The length of a signature in bytes
     public static let signatureLength = 64
 
-    // The number of random bytes needed for signing
+    /// The number of random bytes needed for signing
     public static let randomLength = 64
 
     // MARK: VRF Constants
@@ -29,7 +29,7 @@ public final class Curve25519 {
     /// The length of a VRF signature in bytes
     public static let vrfSignatureLength = 96
 
-    // The number of random bytes needed for signing
+    /// The number of random bytes needed for signing
     public static let vrfRandomLength = 32
 
     /// The length of the VRF verification output in bytes

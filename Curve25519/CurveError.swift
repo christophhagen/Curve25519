@@ -28,8 +28,10 @@ public enum CurveError: Error, CustomStringConvertible {
     /// Random data less than 64 byte
     case randomLength(Int)
 
+    /// Invalid signature length
     case signatureLength(Int)
 
+    /// A textual representation of the error
     public var description: String {
         switch self {
         case .keyLength(let len): return "Key has invalid length \(len)"

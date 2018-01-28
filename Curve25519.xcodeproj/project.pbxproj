@@ -473,6 +473,9 @@
 		CEC812DB201E1F470018D42E /* VerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812DA201E1F470018D42E /* VerificationTests.swift */; };
 		CEC812DD201E1F7F0018D42E /* VRFSignatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812DC201E1F7F0018D42E /* VRFSignatureTests.swift */; };
 		CEC812DF201E25CA0018D42E /* VRFVerificationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812DE201E25CA0018D42E /* VRFVerificationTests.swift */; };
+		CEC812E0201E2FBA0018D42E /* CurveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D0201E0D590018D42E /* CurveError.swift */; };
+		CEC812E1201E2FBB0018D42E /* CurveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D0201E0D590018D42E /* CurveError.swift */; };
+		CEC812E2201E2FBB0018D42E /* CurveError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC812D0201E0D590018D42E /* CurveError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1428,6 +1431,7 @@
 				CEB45BC3201CCD83002BB845 /* curve25519-donna.c in Sources */,
 				CEB4591B201CA7FC002BB845 /* ge_p3_0.c in Sources */,
 				CEB45920201CA7FC002BB845 /* ge_precomp_0.c in Sources */,
+				CEC812E0201E2FBA0018D42E /* CurveError.swift in Sources */,
 				CEB459A4201CA810002BB845 /* open_modified.c in Sources */,
 				CEB45912201CA7FC002BB845 /* ge_add.c in Sources */,
 				CEB45BC0201CCD70002BB845 /* Curve.swift in Sources */,
@@ -1509,6 +1513,7 @@
 				CEB45BC4201CCD83002BB845 /* curve25519-donna.c in Sources */,
 				CEB45941201CA7FD002BB845 /* ge_p3_0.c in Sources */,
 				CEB45946201CA7FD002BB845 /* ge_precomp_0.c in Sources */,
+				CEC812E1201E2FBB0018D42E /* CurveError.swift in Sources */,
 				CEB459BB201CA811002BB845 /* open_modified.c in Sources */,
 				CEB45938201CA7FD002BB845 /* ge_add.c in Sources */,
 				CEB45BC1201CCD71002BB845 /* Curve.swift in Sources */,
@@ -1590,6 +1595,7 @@
 				CEB45BC5201CCD84002BB845 /* curve25519-donna.c in Sources */,
 				CEB45967201CA7FD002BB845 /* ge_p3_0.c in Sources */,
 				CEB4596C201CA7FD002BB845 /* ge_precomp_0.c in Sources */,
+				CEC812E2201E2FBB0018D42E /* CurveError.swift in Sources */,
 				CEB459D2201CA811002BB845 /* open_modified.c in Sources */,
 				CEB4595E201CA7FD002BB845 /* ge_add.c in Sources */,
 				CEB45BC2201CCD71002BB845 /* Curve.swift in Sources */,

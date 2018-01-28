@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Curve25519  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Curve25519  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Curve25519 Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/christophhagen/Curve25519"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Curve25519 Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Curve25519  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/Curve25519.html">Curve25519</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/CurveError.html">CurveError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='curve25519' class='heading'>Curve25519</h1>
+
+<p>A small framework to use Curve25519 functions in Swift.</p>
+<h2 id='purpose' class='heading'>Purpose</h2>
+
+<p>I created this framework to provide a Swift API to the Elliptic Curve functions needed for the Signal Protocol. It encapsules the pure C implementation found in <a href="https://github.com/signalapp/libsignal-protocol-c">libsignal-protocol-c</a>.</p>
+
+<p>The framework is used with my <a href="https://github.com/christophhagen/SignalProtocolSwift">Swift implementation</a> of the <a href="https://signal.org/docs/">Signal Protocol</a>.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>The framework can be installed by using <a href="https://cocoapods.org/">Cocoapods</a>. Include in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Curve25519'</span>
+</code></pre>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>Once the Framework is included in your project, simply</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Curve25519</span>
+</code></pre>
+
+<p>All features are available through static functions of the <code>Curve25519</code> class, for example:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">agreement</span> <span class="o">=</span> <span class="kt">Curve25519</span><span class="o">.</span><span class="nf">calculateAgreement</span><span class="p">(</span><span class="nv">privateKey</span><span class="p">:</span> <span class="n">priv</span><span class="p">,</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="n">pub</span><span class="p">)</span>
+</code></pre>
+<h2 id='features' class='heading'>Features</h2>
+
+<p>The framework provides the following features:</p>
+<h3 id='creating-public-keys-for-private-keys' class='heading'>Creating public keys for private keys</h3>
+
+<p>Create the corresponding public key for a 32 byte private key.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">publicKey</span><span class="p">(</span><span class="k">for</span> <span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">basepoint</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span>
+</code></pre>
+
+<p>The function will return nil if the inputs have the wrong size.</p>
+<h3 id='signing-and-verifying-messages' class='heading'>Signing and verifying messages</h3>
+
+<p>It is possible to sign a message with a private key, and then verify the message with a public key.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">signature</span><span class="p">(</span><span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">randomData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span>
+
+<span class="kd">func</span> <span class="nf">verify</span><span class="p">(</span><span class="nv">signature</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span>
+</code></pre>
+<h3 id='vrf-signature-and-verification' class='heading'>VRF signature and verification</h3>
+
+<p>Additionally it is possible to create and verify VRF (Verifiable Random Function) signatures.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">vrfSignature</span><span class="p">(</span><span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">randomData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span>
+
+<span class="kd">func</span> <span class="nf">verify</span><span class="p">(</span><span class="nv">vrfSignature</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span>
+</code></pre>
+<h3 id='key-agreement' class='heading'>Key agreement</h3>
+
+<p>Create a shared secret between a private and a public key.</p>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">calculateAgreement</span><span class="p">(</span><span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span>
+</code></pre>
+<h2 id='directly-using-c-functions' class='heading'>Directly using C functions</h2>
+
+<p>Additionally all C functions are exposed directly for use:</p>
+<pre class="highlight swift"><code><span class="c1">// Public key creation</span>
+<span class="kd">func</span> <span class="nf">curve25519_donna</span><span class="p">(</span><span class="n">_</span> <span class="nv">pub</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                      <span class="n">_</span> <span class="nv">priv</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                      <span class="n">_</span> <span class="nv">base</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span>
+
+<span class="c1">// Signing</span>
+<span class="kd">func</span> <span class="nf">curve25519_sign</span><span class="p">(</span>
+                  <span class="n">_</span> <span class="nv">signature_out</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">curve25519_privkey</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg_len</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">random</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span>
+
+<span class="c1">// Verification</span>
+<span class="kd">func</span> <span class="nf">curve25519_verify</span><span class="p">(</span>
+                  <span class="n">_</span> <span class="nv">signature</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">curve25519_pubkey</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg_len</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span>
+
+<span class="c1">// VRF signature</span>
+<span class="kd">func</span> <span class="nf">generalized_xveddsa_25519_sign</span><span class="p">(</span>
+                  <span class="n">_</span> <span class="nv">signature_out</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">x25519_privkey_scalar</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg_len</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">random</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">customization_label</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">customization_label_len</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span>
+
+<span class="c1">// VRF verification</span>
+<span class="kd">func</span> <span class="nf">generalized_xveddsa_25519_verify</span><span class="p">(</span>
+                  <span class="n">_</span> <span class="nv">vrf_out</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">signature</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">x25519_pubkey_bytes</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">msg_len</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">customization_label</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                  <span class="n">_</span> <span class="nv">customization_label_len</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span>
+
+<span class="c1">// Agreement</span>
+<span class="kd">func</span> <span class="nf">curve25519_donna</span><span class="p">(</span><span class="n">_</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                      <span class="n">_</span> <span class="nv">priv</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">,</span>
+                      <span class="n">_</span> <span class="nv">pub</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span>
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/christophhagen" target="_blank" rel="external">Christoph Hagen</a>. All rights reserved. (Last updated: 2018-01-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

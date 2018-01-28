@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Curve25519 Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Curve25519" class="dashAnchor"></a>
+    <a title="Curve25519 Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Curve25519 Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/christophhagen/Curve25519"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Curve25519 Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Curve25519 Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Curve25519.html">Curve25519</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/CurveError.html">CurveError</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Curve25519</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Curve25519</span></code></pre>
+
+                </div>
+              </div>
+            <p>Curve25519 provides access to elliptic curve signature, agreement and verification functions.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Key%20Constants"></a>
+                <a name="//apple_ref/swift/Section/Key Constants" class="dashAnchor"></a>
+                <a href="#/Key%20Constants">
+                  <h3 class="section-name">Key Constants</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC9keyLengthSivZ"></a>
+                    <a name="//apple_ref/swift/Variable/keyLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC9keyLengthSivZ">keyLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length of the private and public key in bytes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">keyLength</span> <span class="o">=</span> <span class="mi">32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC15signatureLengthSivZ"></a>
+                    <a name="//apple_ref/swift/Variable/signatureLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC15signatureLengthSivZ">signatureLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length of a signature in bytes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">signatureLength</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC12randomLengthSivZ"></a>
+                    <a name="//apple_ref/swift/Variable/randomLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC12randomLengthSivZ">randomLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of random bytes needed for signing</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">randomLength</span> <span class="o">=</span> <span class="mi">64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/VRF%20Constants"></a>
+                <a name="//apple_ref/swift/Section/VRF Constants" class="dashAnchor"></a>
+                <a href="#/VRF%20Constants">
+                  <h3 class="section-name">VRF Constants</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC18vrfSignatureLengthSivZ"></a>
+                    <a name="//apple_ref/swift/Variable/vrfSignatureLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC18vrfSignatureLengthSivZ">vrfSignatureLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length of a VRF signature in bytes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">vrfSignatureLength</span> <span class="o">=</span> <span class="mi">96</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC15vrfRandomLengthSivZ"></a>
+                    <a name="//apple_ref/swift/Variable/vrfRandomLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC15vrfRandomLengthSivZ">vrfRandomLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of random bytes needed for signing</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">vrfRandomLength</span> <span class="o">=</span> <span class="mi">32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC15vrfVerifyLengthSivZ"></a>
+                    <a name="//apple_ref/swift/Variable/vrfVerifyLength" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC15vrfVerifyLengthSivZ">vrfVerifyLength</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The length of the VRF verification output in bytes</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">vrfVerifyLength</span> <span class="o">=</span> <span class="mi">32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20keys"></a>
+                <a name="//apple_ref/swift/Section/Public keys" class="dashAnchor"></a>
+                <a href="#/Public%20keys">
+                  <h3 class="section-name">Public keys</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC9publicKey10Foundation4DataVAF3for_AF9basepointtKFZ"></a>
+                    <a name="//apple_ref/swift/Method/publicKey(for:basepoint:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC9publicKey10Foundation4DataVAF3for_AF9basepointtKFZ">publicKey(for:basepoint:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generate a public key from a given private key.
+Fails if the key could not be generated.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors are:
+
+</div>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC9keyLengthSivZ">keyLength</a></code> if the private key is less than 32 byte</li>
+<li><code>basepointLength</code> if the basepoint is less than 32 byte</li>
+<li><code>curveError</code> if the curve donna implementation can&rsquo;t calculate the public key</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/CurveError.html">CurveError</a></code> errors
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">publicKey</span><span class="p">(</span><span class="k">for</span> <span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">basepoint</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>privateKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The private key of the pair, 32 byte</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>basepoint</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The basepoint of the curve, 32 byte</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The public key (32 byte)</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Signatures"></a>
+                <a name="//apple_ref/swift/Section/Signatures" class="dashAnchor"></a>
+                <a href="#/Signatures">
+                  <h3 class="section-name">Signatures</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC9signature10Foundation4DataVAF3for_AF10privateKeyAF06randomD0tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/signature(for:privateKey:randomData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC9signature10Foundation4DataVAF3for_AF10privateKeyAF06randomD0tKFZ">signature(for:privateKey:randomData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the signature for the given message.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors are:
+
+</div>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC9keyLengthSivZ">keyLength</a></code> if the private key is less than 32 byte</li>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC12randomLengthSivZ">randomLength</a></code> if the random data is less than 64 byte</li>
+<li><code>curveError</code> if the curve implementation can&rsquo;t calculate the signature</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/CurveError.html">CurveError</a></code> errors
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">signature</span><span class="p">(</span><span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">randomData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to sign</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>privateKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The private key used for signing</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>randomData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>64 byte of random data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The signature of the message, <code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC15signatureLengthSivZ">Curve25519.signatureLength</a></code> bytes</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC12vrfSignature10Foundation4DataVAF3for_AF10privateKeyAF06randomE0tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/vrfSignature(for:privateKey:randomData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC12vrfSignature10Foundation4DataVAF3for_AF10privateKeyAF06randomE0tKFZ">vrfSignature(for:privateKey:randomData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculates a unique Curve25519 signature for the private key</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors are:
+
+</div>
+<li><code>messageLength</code> if the message has length 0</li>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC9keyLengthSivZ">keyLength</a></code> if the private key is less than 32 byte</li>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC12randomLengthSivZ">randomLength</a></code> if the random data is less than 32 byte</li>
+<li><code>curveError</code> if the curve implementation can&rsquo;t calculate the signature</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/CurveError.html">CurveError</a></code> errors
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">vrfSignature</span><span class="p">(</span><span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">randomData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message to sign</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>privateKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The 32-byte private key to use for signing</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>randomData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>32 byte of random data</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The 96-byte signature</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Verification"></a>
+                <a name="//apple_ref/swift/Section/Verification" class="dashAnchor"></a>
+                <a href="#/Verification">
+                  <h3 class="section-name">Verification</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC6verifySb10Foundation4DataV9signature_AF3forAF9publicKeytFZ"></a>
+                    <a name="//apple_ref/swift/Method/verify(signature:for:publicKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC6verifySb10Foundation4DataV9signature_AF3forAF9publicKeytFZ">verify(signature:for:publicKey:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Verify that the signature corresponds to the message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">verify</span><span class="p">(</span><span class="nv">signature</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>signature</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The signature data</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message for which the signature is checked</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>publicKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The 32-byte public key to verify the signature with</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code>, if the signature is valid</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC6verify10Foundation4DataVAF12vrfSignature_AF3forAF9publicKeytKFZ"></a>
+                    <a name="//apple_ref/swift/Method/verify(vrfSignature:for:publicKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC6verify10Foundation4DataVAF12vrfSignature_AF3forAF9publicKeytKFZ">verify(vrfSignature:for:publicKey:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Verify that the vrf signature corresponds to the message.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors are:
+
+</div>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC9keyLengthSivZ">keyLength</a></code> if the public key is less than 32 byte</li>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC15signatureLengthSivZ">signatureLength</a></code> if the signature data is not 96 byte</li>
+<li><code>curveError</code> if the curve implementation can&rsquo;t calculate the vrf output</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/CurveError.html">CurveError</a></code> errors
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">verify</span><span class="p">(</span><span class="nv">vrfSignature</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="k">for</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>vrfSignature</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The vrf signature data (96 byte)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>message</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The message for which the signature is checked</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>publicKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The 32-byte public key to verify the signature with</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The vrf output (32 byte)</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Agreements"></a>
+                <a name="//apple_ref/swift/Section/Agreements" class="dashAnchor"></a>
+                <a href="#/Agreements">
+                  <h3 class="section-name">Agreements</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10Curve25519AAC18calculateAgreement10Foundation4DataVAF10privateKey_AF06publicG0tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/calculateAgreement(privateKey:publicKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10Curve25519AAC18calculateAgreement10Foundation4DataVAF10privateKey_AF06publicG0tKFZ">calculateAgreement(privateKey:publicKey:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate the shared agreement between a private key and a public key.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Possible errors are:
+
+</div>
+<li><code><a href="../Classes/Curve25519.html#/s:10Curve25519AAC9keyLengthSivZ">keyLength</a></code> if the public/private key is less than 32 byte</li>
+<li><code>curveError</code> if the curve implementation can&rsquo;t calculate the agreement</li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <code><a href="../Enums/CurveError.html">CurveError</a></code> errors
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">calculateAgreement</span><span class="p">(</span><span class="nv">privateKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">publicKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>privateKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The private key for the agreement</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>publicKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The public key for the agreement</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The agreement data (32 byte)</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/christophhagen" target="_blank" rel="external">Christoph Hagen</a>. All rights reserved. (Last updated: 2018-01-28)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.8.3</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
