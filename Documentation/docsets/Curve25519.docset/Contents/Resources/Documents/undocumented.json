@@ -1,26 +1,19 @@
 {
   "warnings": [
     {
-      "file": "/Users/User/Development/Github/Curve25519/Curve25519/Curve.swift",
-      "line": 25,
-      "symbol": "Curve25519.randomLength",
-      "symbol_kind": "source.lang.swift.decl.var.static",
+      "file": "/Users/user/Development/Curve25519/Curve25519/Curve.swift",
+      "line": 262,
+      "symbol": "UnsafeRawBufferPointer.dataPtr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/User/Development/Github/Curve25519/Curve25519/Curve.swift",
-      "line": 33,
-      "symbol": "Curve25519.vrfRandomLength",
-      "symbol_kind": "source.lang.swift.decl.var.static",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/User/Development/Github/Curve25519/Curve25519/CurveError.swift",
-      "line": 31,
-      "symbol": "CurveError.signatureLength",
-      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "file": "/Users/user/Development/Curve25519/Curve25519/Curve.swift",
+      "line": 269,
+      "symbol": "UnsafeMutableRawBufferPointer.dataPtr",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/User/Development/Github/Curve25519"
+  "source_directory": "/Users/user/Development/Curve25519"
 }

@@ -259,6 +259,7 @@ public final class Curve25519 {
 
 private extension UnsafeRawBufferPointer {
     
+    /// The forcefully unwrapped pointer to the data
     var dataPtr: UnsafePointer<UInt8> {
         return baseAddress!.assumingMemoryBound(to: UInt8.self)
     }
@@ -266,6 +267,7 @@ private extension UnsafeRawBufferPointer {
 
 private extension UnsafeMutableRawBufferPointer {
     
+    /// The forcefully unwrapped pointer to the data
     var dataPtr: UnsafeMutablePointer<UInt8> {
         return baseAddress!.assumingMemoryBound(to: UInt8.self)
     }
