@@ -15,6 +15,11 @@ The framework can be installed by using [Cocoapods](https://cocoapods.org/). Inc
 pod 'Curve25519'
 ```
 
+The version depends on the Swift version you use:
+- Swift 5: `1.1`
+- Swift 4.2: `1.0.1`
+- Swift 4: `1.0`
+
 ## Usage
 
 Once the Framework is included in your project, simply

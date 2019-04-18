@@ -3,12 +3,12 @@ Pod::Spec.new do |spec|
     spec.summary = 'Module wrapper for Curve25519 that is importable in Swift.'
     spec.license = 'MIT'
 
-    spec.version = '1.0.1'
+    spec.version = '1.1'
     spec.source = {
         :git => 'https://github.com/christophhagen/Curve25519.git',
         :tag => spec.version
     }
-    spec.swift_version = '4.2'
+    spec.swift_version = '5.0'
 
     spec.authors = { 'Christoph Hagen' => 'christoph@spacemasters.eu' } 
     spec.homepage = 'https://github.com/christophhagen/Curve25519'
