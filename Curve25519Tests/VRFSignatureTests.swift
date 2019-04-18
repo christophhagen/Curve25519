@@ -10,6 +10,10 @@ import XCTest
 import Curve25519
 
 class VRFSignatureTests: XCTestCase {
+    
+    private var vrfRandom: Data {
+        return randomData[0..<Curve25519.vrfRandomLength]
+    }
 
     /**
      Check if the signature is correct.
@@ -18,7 +22,10 @@ class VRFSignatureTests: XCTestCase {
 
         let mySignature: Data
         do {
-            mySignature = try Curve25519.vrfSignature(for: message, privateKey: alicePrivate, randomData: randomData)
+            mySignature = try Curve25519.vrfSignature(
+                for: message,
+                privateKey: alicePrivate,
+                randomData: vrfRandom)
         } catch {
             XCTFail("Could not calculate VRF signature: \(error)")
             return
@@ -36,7 +43,10 @@ class VRFSignatureTests: XCTestCase {
 
         let mySignature: Data
         do {
-            mySignature = try Curve25519.vrfSignature(for: invalid, privateKey: alicePrivate, randomData: randomData)
+            mySignature = try Curve25519.vrfSignature(
+                for: invalid,
+                privateKey: alicePrivate,
+                randomData: vrfRandom)
         } catch {
             XCTFail("Could not calculate VRF signature: \(error)")
             return
@@ -54,7 +64,10 @@ class VRFSignatureTests: XCTestCase {
 
         let mySignature: Data
         do {
-            mySignature = try Curve25519.vrfSignature(for: message, privateKey: invalid, randomData: randomData)
+            mySignature = try Curve25519.vrfSignature(
+                for: message,
+                privateKey: invalid,
+                randomData: vrfRandom)
         } catch {
             XCTFail("Could not calculate VRF signature: \(error)")
             return
@@ -67,12 +80,15 @@ class VRFSignatureTests: XCTestCase {
      Check if the signature is incorrect for different random data.
      */
     func testInvalidRandomData() {
-        var invalid = randomData
+        var invalid = vrfRandom
         invalid[10] += 1
 
         let mySignature: Data
         do {
-            mySignature = try Curve25519.vrfSignature(for: message, privateKey: alicePrivate, randomData: invalid)
+            mySignature = try Curve25519.vrfSignature(
+                for: message,
+                privateKey: alicePrivate,
+                randomData: invalid)
         } catch {
             XCTFail("Could not calculate VRF signature: \(error)")
             return
