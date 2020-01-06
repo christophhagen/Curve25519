@@ -3,14 +3,14 @@ Pod::Spec.new do |spec|
     spec.summary = 'Module wrapper for Curve25519 that is importable in Swift.'
     spec.license = 'MIT'
 
-    spec.version = '1.1'
+    spec.version = '2.0'
     spec.source = {
         :git => 'https://github.com/christophhagen/Curve25519.git',
         :tag => spec.version
     }
     spec.swift_version = '5.0'
 
-    spec.authors = { 'Christoph Hagen' => 'christoph@spacemasters.eu' } 
+    spec.authors = { 'Christoph Hagen' => 'christoph@spacemasters.eu' }
     spec.homepage = 'https://github.com/christophhagen/Curve25519'
 
     spec.ios.deployment_target = '9.0'
@@ -18,6 +18,8 @@ Pod::Spec.new do |spec|
     spec.tvos.deployment_target = '9.0'
     spec.watchos.deployment_target = '4.0'
 
-    spec.source_files = 'Curve25519/**/*.{swift,h,c}'
-    spec.public_header_files = 'Curve25519/pub/*.h'
+    spec.source_files = 'Sources/**/*.swift'
+
+    spec.dependency 'CCurve25519'
+
 end

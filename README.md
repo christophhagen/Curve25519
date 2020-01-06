@@ -3,9 +3,9 @@ A small framework to use Curve25519 functions in Swift.
 
 ## Purpose
 
-I created this framework to provide a Swift API to the Elliptic Curve functions needed for the Signal Protocol. It encapsules the pure C implementation found in [libsignal-protocol-c](https://github.com/signalapp/libsignal-protocol-c).
+This framework was created to provide a Swift API to the Elliptic Curve functions needed for the Signal Protocol. It encapsulates the pure C implementation found in [libsignal-protocol-c](https://github.com/signalapp/libsignal-protocol-c).
 
-The framework is used with my [Swift implementation](https://github.com/christophhagen/SignalProtocolSwift) of the [Signal Protocol](https://signal.org/docs/).
+The framework is used in the [Swift implementation](https://github.com/christophhagen/SignalProtocolSwift) of the [Signal Protocol](https://signal.org/docs/).
 
 ## Installation
 
