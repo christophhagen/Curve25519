@@ -24,6 +24,9 @@ public final class Curve25519 {
 
     /// The number of random bytes needed for signing
     public static let randomLength = 64
+    
+    /// The default basepoint for X25519 key agreement
+    public static let defaultBasepoint: Data = [9] + Data(repeating: 0, count: 31)
 
     // MARK: VRF Constants
 
@@ -50,7 +53,7 @@ public final class Curve25519 {
      - returns: The public key, `keyLength` byte
      - throws: `CurveError` errors
      */
-    public static func publicKey(for privateKey: Data, basepoint: Data) throws -> Data {
+    public static func publicKey(for privateKey: Data, basepoint: Data = defaultBasepoint) throws -> Data {
         guard privateKey.count == keyLength else {
             throw CurveError.keyLength(privateKey.count)
         }
